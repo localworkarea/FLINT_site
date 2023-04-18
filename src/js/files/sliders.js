@@ -23,139 +23,94 @@ import "../../scss/base/swiper.scss";
 // Повний набір стилів з node_modules
 // import 'swiper/css';
 
-// Ініціалізація слайдерів
-function initSliders() {
-	// Список слайдерів
-	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector('.fourth-slide__slider')) { // Вказуємо склас потрібного слайдера
-		// Створюємо слайдер
-		new Swiper('.fourth-slide__slider', { // Вказуємо склас потрібного слайдера
-			// Підключаємо модулі слайдера
-			// для конкретного випадку
+
+  // breakpoint where swiper will be destroyed
+  // and switches to a dual-column layout
+  const breakpoint = window.matchMedia( '(max-width:489px)' );
+
+	let mySwiper;
+
+  const breakpointChecker = function() {
+
+    // if larger viewport and multi-row layout needed
+    if ( breakpoint.matches === true ) {
+      // clean up old instances and inline styles when available
+	  if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
+	  // or/and do nothing
+	  return;
+      // else if a small viewport and single column layout needed
+      } else if ( breakpoint.matches === false ) {
+        // fire small viewport version of swiper
+        return enableSwiper();
+      }
+  };
+
+  const enableSwiper = function() {
+    mySwiper = new Swiper ('.fourth-slide__slider', {
 			modules: [Navigation, EffectCoverflow, Keyboard  ],
 			slideToClickedSlide: true,
 			observer: true,
 			observeParents: true,
+			grabCursor: true,
 			slidesPerView: "auto",
 			centeredSlides: true,
 			effect: 'coverflow',
 			initialSlide: 1,
-			coverflowEffect: {
-				rotate: 0,
-				stretch: 0,
-				depth: 100,
-				modifier: 1,
-				// slideShadows: true,
-			},
+			updateOnWindowResize: true,
 			
 			keyboard: {
 				enabled: true,
 				onlyInViewport: true,
 				pageUpDown: true,
 			},
-			
-			// spaceBetween: 0,
-			// autoHeight: true,
-			speed: 800,
-
-			//touchRatio: 0,
-			//simulateTouch: false,
-			// loop: true,
-			// loopedSlides: 3,
-			//preloadImages: false,
-			//lazy: true,
-
-			/*
-			// Ефекти
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
-			// Пагінація
-			/*
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			*/
-
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
-			// Кнопки "вліво/вправо"
-			// navigation: {
-			// 	prevEl: '.swiper-button-prev',
-			// 	nextEl: '.swiper-button-next',
-			// },
-			/*
+		
 			// Брейкпоінти
 			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
+				320: {
+					
 				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+				490: {
+					enabled: true,
+					speed: 600,
+					coverflowEffect: {
+						rotate: 0,
+						stretch: 580, // смещение в лево/право
+						depth: 10,
+						modifier: 1,
+						slideShadows: false,
+					},
 				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
+				769: {
+					speed: 800,
+					coverflowEffect: {
+						rotate: 0,
+						stretch: 950, // смещение в лево/право
+						depth: 10,
+						modifier: 1,
+						slideShadows: false,
+					},
 				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+				1024: {
+					speed: 1000,
+					coverflowEffect: {
+						rotate: 0,
+						stretch: 400, // смещение в лево/право
+						depth: 10,
+						modifier: 1,
+						slideShadows: false,
+					},
 				},
 			},
-			*/
-			// Події
-			on: {
 
-			}
-		});
-	}
-}
-// Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
-function initSlidersScroll() {
-	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
-	if (sliderScrollItems.length > 0) {
-		for (let index = 0; index < sliderScrollItems.length; index++) {
-			const sliderScrollItem = sliderScrollItems[index];
-			const sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
-			const sliderScroll = new Swiper(sliderScrollItem, {
-				observer: true,
-				observeParents: true,
-				direction: 'vertical',
-				slidesPerView: 'auto',
-				freeMode: {
-					enabled: true,
-				},
-				scrollbar: {
-					el: sliderScrollBar,
-					draggable: true,
-					snapOnRelease: false
-				},
-				mousewheel: {
-					releaseOnEdges: true,
-				},
-			});
-			sliderScroll.scrollbar.updateSize();
-		}
-	}
-}
+    });
+
+  };
+
+  // keep an eye on viewport size changes
+  breakpoint.addEventListener("change", breakpointChecker);
 
 window.addEventListener("load", function (e) {
-	// Запуск ініціалізації слайдерів
-	initSliders();
-	// Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
-	//initSlidersScroll();
+		// kickstart
+		breakpointChecker();
 });
+ 

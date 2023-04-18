@@ -314,16 +314,33 @@ export class FullPage {
 
 			// TIME-LINE FIRST SECTION --------------------
 			// Чтобы запускалась анимация снвоа - нужно убрать некоторые ситил позиционирования в CSS
+			let mm = gsap.matchMedia();
 			let timeline = gsap.timeline({
 				paused: true,
 			});
-			timeline.to('.first__refresh', {
-				duration: 2,
-				keyframes: [
-					{y: -500,},
-				],
+			mm.add('(min-width: 591px)', () => {
+				timeline.fromTo('.first__refresh', {
+					y: 0,
+				}, 
+				{
+					y: -150,
+					delay: 0.2,
+				});
 			});
-			timeline.to('.first__images', {
+			mm.add('(max-width: 590px)', () => {
+				timeline.fromTo('.first__refresh', {
+					y: 0,
+				}, 
+				{
+					y: -200,
+					delay: 0.2,
+				});
+			});
+			timeline.fromTo('.first__images', {
+				y: 0,
+				yPercent: -50,
+			},
+			{
 				keyframes: [
 					{rotation: 33,},
 					{rotation: 27,},
@@ -331,10 +348,15 @@ export class FullPage {
 					// {rotation: 0, y: 148, delay: 0.1,},
 					{rotation: 0, y: 388,},
 					{rotation: 0, y: 557,},
-					{rotation: 0, y: 2000, opacity: 0},
+					{rotation: 0, y: 2000},
 				]
 			}, "<");
-			timeline.to('.first__img-02', {
+			timeline.fromTo('.first__img-02', {
+				y: 0,
+				x: 0,
+				rotation: 0,
+			},
+			{
 				keyframes: [
 					{rotation: 0,},
 					{rotation: -12, transformOrigin: 'left 100px', y: 20},
@@ -344,137 +366,580 @@ export class FullPage {
 					{rotation: -33, y: -4000},
 				]
 			}, "<");
-			timeline.to('.first__bread-img', {
-				keyframes: [
-					{rotate: 13,},
-					{rotate: 3,},
-					{rotate: -7,},
-					{rotate: -17,},
-					{scale: 1.34,},
-					{scale: 1.53,},
-					{scale: 2.5, opacity: 0},
-				]
-			}, "<");
-			timeline.to('.grenka__img', {
-				keyframes: [
-					{rotate: 51, xPercent:10, yPercent: -103, scale: 1.13, opacity: 1 },
-					{rotate: 51, xPercent:10, yPercent: -110, scale: 1.13 },
-					{rotate: 30, xPercent:2.5, yPercent: -134, scale: 1.13, },
-					{rotate: 14, xPercent:-140, yPercent: -75, scale: 1.76, },
-					{rotate: -2, xPercent:-227, yPercent: -56, scale: 1.76, },
-					{rotate: -2, xPercent:-262, yPercent: -43, scale: 2.16, },
-					{rotate: -2, xPercent:-471, yPercent: -34, scale: 2.62, },
-				]
-			}, "<+=0.3");
-			timeline.to('.grenka', {
-				keyframes: [
-					{width:"25%", opacity: 1,},
-					{width:"27%"},
-					// {width:"30%"},
-					{width:"50%",},
-				]
-			}, "<+=2");
+			mm.add('(min-width: 769px)', () => {
+				timeline.fromTo('.first__bread-img', {
+					x: 0,
+					y: 0,
+					xPercent: -50,
+					yPercent: -50,
+					rotation: 0,
+					scale: 1.22,
+				},
+				 {
+					keyframes: [
+						{rotate: 13,},
+						{rotate: 3,},
+						{rotate: -7,},
+						{rotate: -17,},
+						{scale: 1.34,},
+						{scale: 1.53,},
+						{scale: 2.5,},
+					]
+				}, "<");
+			});
+			mm.add('(min-width: 376px) and (max-width: 768px)', () => {
+				timeline.fromTo('.first__bread-img', {
+					x: 0,
+					y: 0,
+					xPercent: -40,
+					yPercent: -51,
+					rotation: 0,
+					scale: 2.8,
+				},
+				 {
+					keyframes: [
+						{rotate: 13,},
+						{rotate: 3,},
+						{rotate: -7,},
+						{rotate: -17,},
+						{scale: 3,},
+						{scale: 3.4,},
+						{scale: 3.99,},
+					]
+				}, "<");
+			});
+			mm.add('(max-width: 375px)', () => {
+				timeline.fromTo('.first__bread-img', {
+					x: 0,
+					y: 0,
+					xPercent: -40,
+					yPercent: -33,
+					rotation: 0,
+					scale: 2.8,
+				},
+				 {
+					keyframes: [
+						{rotate: 13,},
+						{rotate: 3,},
+						{rotate: -7,},
+						{rotate: -17,},
+						{scale: 4, xPercent: -30,},
+						{scale: 4.5,},
+						{scale: 5.5,},
+					]
+				}, "<");
+			});
+			mm.add('(min-width: 1201px)', () => {
+				timeline.fromTo('.grenka__img',{
+					x: 0,
+					y: 0,
+				},
+				 {
+					keyframes: [
+						{rotate: 51, xPercent:10, yPercent: -103, scale: 1.13, opacity: 1 },
+						{rotate: 51, xPercent:10, yPercent: -110, scale: 1.13 },
+						{rotate: 30, xPercent:2.5, yPercent: -134, scale: 1.13, },
+						{rotate: 14, xPercent:-140, yPercent: -75, scale: 1.76, },
+						{rotate: -2, xPercent:-227, yPercent: -56, scale: 1.76, },
+						{rotate: -2, xPercent:-262, yPercent: -43, scale: 2.16, },
+						{rotate: -2, xPercent:-471, yPercent: -34, scale: 2.62, },
+					]
+				}, "<+=0.3");
+			});
+			mm.add('(min-width: 711px) and (max-width: 1200px)', () => {
+				timeline.fromTo('.grenka__img',{
+					x: 0,
+					y: 0,
+				},
+				 {
+					keyframes: [
+						{rotate: 51, xPercent:10, yPercent: -103, scale: 1.13, opacity: 1 },
+						{rotate: 51, xPercent:10, yPercent: -110, },
+						{rotate: 30, xPercent:2.5, yPercent: -134, },
+						{rotate: 14, xPercent:-120, yPercent: -75, scale: 1.5, },
+						{rotate: -2, xPercent:-207, yPercent: -56, },
+						{rotate: -2, xPercent:-242, scale: 1.95, },
+						{rotate: -2, xPercent:-348, yPercent: -50, },
+					]
+				}, "<+=0.3");
+			});
+			mm.add('(min-width: 481px) and (max-width: 710px)', () => {
+				timeline.fromTo('.grenka__img',{
+					x: 0,
+					y: 0,
+				},
+				 {
+					keyframes: [
+						{rotate: 51, xPercent:10, yPercent: -103, scale: 1.13, opacity: 1 },
+						{rotate: 51, xPercent:10, yPercent: -110, },
+						{rotate: 30, xPercent:2.5, yPercent: -134, },
+						{rotate: 14, xPercent:-120, yPercent: -75, scale: 1.25, },
+						{rotate: -2, xPercent:-150, yPercent: -56, },
+						{rotate: -2, xPercent:-200, scale: 1.5, },
+						{rotate: -2, xPercent:-246, yPercent: -50, },
+					]
+				}, "<+=0.3");
+			});
+			mm.add('(max-width: 480px)', () => {
+				timeline.fromTo('.grenka__img',{
+					x: 0,
+					y: 0,
+				},
+				 {
+					keyframes: [
+						{rotate: 51, xPercent:10, yPercent: -80, scale: 0.9, opacity: 1 },
+						{rotate: 51, xPercent:10, yPercent: -100, },
+						{rotate: 30, xPercent:2.5, yPercent: -130, },
+						{rotate: 14, xPercent:-80, yPercent: -90, scale: 1.1, },
+						{rotate: -2, xPercent:-110, yPercent: -80, },
+						{rotate: -2, xPercent:-150, scale: 1.3, },
+						{rotate: -2, xPercent:-182, yPercent: -72, },
+					]
+				}, "<+=0.3");
+			});
+			mm.add('(min-width: 1201px)', () => {
+				timeline.fromTo('.grenka', {
+					y: 0,
+					x: 0,
+					yPercent: -50,
+					xPercent: -39,
+					opacity: 0,
+					width: 471,
+				},
+				 {
+					keyframes: [
+						{width: 471, opacity: 1,},
+						{width:500},
+						{width:942,},
+					]
+				}, "<+=2");
+			});
+			mm.add('(min-width: 711px) and (max-width: 1200px)', () => {
+				timeline.fromTo('.grenka', {
+					y: 0,
+					x: 0,
+					yPercent: -50,
+					xPercent: -39,
+					opacity: 0,
+					width: 281,
+				},
+				 {
+					keyframes: [
+						{width: 281, opacity: 1, xPercent: -41,},
+						{width:320,},
+						{width:617,},
+					]
+				}, "<+=2");
+			});
+			mm.add('(min-width: 481px) and (max-width: 710px)', () => {
+				timeline.fromTo('.grenka', {
+					y: 0,
+					x: 0,
+					yPercent: -50,
+					xPercent: -39,
+					opacity: 0,
+					width:  225,
+				},
+				 {
+					keyframes: [
+						{width: 255, opacity: 1, xPercent: -48,},
+						{width:320,},
+						{width:450,},
+					]
+				}, "<+=2");
+			});
+			mm.add('(max-width: 480px)', () => {
+				timeline.fromTo('.grenka', {
+					y: 0,
+					x: 0,
+					yPercent: -70,
+					xPercent: -39,
+					opacity: 0,
+					width:  150,
+				},
+				 {
+					keyframes: [
+						{width: 150, opacity: 1, xPercent: -44,},
+						{width: 190,},
+						{width: 298,},
+					]
+				}, "<+=2");
+			});
 			timeline.timeScale(1.2);
 
 			// TIME-LINE SECOND SECTION --------------------
 			let tlGrenka = gsap.timeline({
 				paused: true,
 			});
-			tlGrenka.to(".grenka__img", {
-				keyframes: [
-					{yPercent: -200, delay: 0.45,},
-					{yPercent: -350, delay: 0.3,},
-					{yPercent: -900},
-				],
+			mm.add('(min-width: 1201px)', () => {
+				tlGrenka.to(".grenka__img", {
+					keyframes: [
+						{yPercent: -200, delay: 0.45,},
+						{yPercent: -350, delay: 0.3,},
+						{yPercent: -900},
+					],
+				});
 			});
-			tlGrenka.to(".grenka", {
-				keyframes: [
-					{yPercent: -200,delay: 0.45,},
-					{yPercent: -350,delay: 0.3,},
-					{yPercent: -900},
-				],
-			}, "<");
+			mm.add('(max-width: 1200px)', () => {
+				tlGrenka.to(".grenka__img", {
+					keyframes: [
+						{yPercent: -150, delay: 0.45,},
+						{yPercent: -350, delay: 0.3,},
+						{yPercent: -900},
+					],
+				});
+			});
+			mm.add('(min-width: 1201px)', () => {
+				tlGrenka.fromTo(".grenka", {
+					opacity: 0,
+					width: 942,
+				}, {
+					keyframes: [
+						{opacity: 1,},
+						{yPercent: -150,},
+						{yPercent: -350,delay: 0.3,},
+						{yPercent: -900, opacity: 0,},
+					],
+				}, "<");
+			});
+			mm.add('(min-width: 711px) and (max-width: 1200px)', () => {
+				tlGrenka.fromTo(".grenka", {
+					opacity: 0,
+					width: 617,
+					xPercent: -41,
+				}, {
+					keyframes: [
+						{opacity: 1,},
+						{yPercent: -150,},
+						{yPercent: -350,delay: 0.3,},
+						{yPercent: -900, opacity: 0,},
+					],
+				}, "<");
+			});
+			mm.add('(max-width: 480px)', () => {
+				tlGrenka.fromTo(".grenka", {
+					opacity: 0,
+					width: 298,
+					xPercent: -44,
+				}, {
+					keyframes: [
+						{opacity: 1,},
+						{yPercent: -150,},
+						{yPercent: -350,delay: 0.3,},
+						{yPercent: -900, opacity: 0,},
+					],
+				}, "<");
+			});
+			mm.add('(min-width: 481px) and (max-width: 710px)', () => {
+				tlGrenka.fromTo(".grenka", {
+					opacity: 0,
+					width: 450,
+					xPercent: -48,
+				}, {
+					keyframes: [
+						{opacity: 1,},
+						{yPercent: -150,},
+						{yPercent: -350,delay: 0.3,},
+						{yPercent: -900, opacity: 0,},
+					],
+				}, "<");
+			});
 			tlGrenka.timeScale(1.1);
+
+			// ---------------------------
 
 			let tlPackages = gsap.timeline({
 				paused: true,
 			});
-			tlPackages.to('.second-slide__bread-img', {
-				keyframes: [
-					{scale: 2.7,},
-					{scale: 1.21, yPercent: 80, opacity: 0.05,},
-					{scale: 1.45, yPercent: -4, delay: 0.2,},
-					{scale: 1.47, yPercent: -46,},
-				]
+			mm.add('(min-width: 769px)', () => {
+				tlPackages.to('.second-slide__bread-img', {
+					keyframes: [
+						{scale: 2.7,},
+						{scale: 1.21, yPercent: 80, opacity: 0.05,},
+						{scale: 1.45, yPercent: -4, delay: 0.2,},
+						{scale: 1.47, yPercent: -46,},
+					]
+				});
 			});
-			tlPackages.to('.second-slide__title', {
-				keyframes: [
-					{y: "100vh", scale: 1.44,},
-					{y: "57vh", scale: 1,},
-					{y: "23vh", scale: 1.15, delay: 0.2,},
-					{y: "1vh", scale: 1.44,},
-				],
-			}, "<");
-			tlPackages.to('.second-slide__packages', {
-				keyframes: [
-					{y: "100vh"},
-					{y: "50vh",},
-					{y: "22vh", delay: 0.2},
-					{y: "-16vh",},
-				]
-			}, "<");
+			mm.add('(max-width: 768px)', () => {
+				tlPackages.to('.second-slide__bread-img', {
+					keyframes: [
+						{scale: 3.5,},
+						{scale: 1.5, yPercent: 80, opacity: 0.05,},
+						{scale: 2, yPercent: -4, delay: 0.2,},
+						{scale: 2.3, yPercent: -42,},
+					]
+				});
+			});
+											// -------------------
+			mm.add('(min-width: 1201px)', () => {
+				tlPackages.to('.second-slide__title', {
+					keyframes: [
+						{y: "100vh", fontSize: 100,},
+						{y: "57vh", fontSize: 70,},
+						{y: "23vh", fontSize: 80, delay: 0.2,},
+						{y: "1vh", fontSize: 100,},
+					],
+				}, "<");
+			});
+			mm.add('(min-width: 769px) and (max-width: 1200px)', () => {
+				tlPackages.to('.second-slide__title', {
+					keyframes: [
+						{y: "100vh", fontSize: 70,},
+						{y: "57vh", fontSize: 50,},
+						{y: "23vh", fontSize: 60, delay: 0.2,},
+						{y: "1vh", fontSize: 70,},
+					],
+				}, "<");
+			});
+			mm.add('(min-width: 711px) and (max-width: 768px)', () => {
+				tlPackages.to('.second-slide__title', {
+					keyframes: [
+						{y: "100vh", fontSize: 70,},
+						{y: "57vh", fontSize: 50,},
+						{y: "23vh", fontSize: 60, delay: 0.2,},
+						{y: "4vh", fontSize: 70,},
+					],
+				}, "<");
+			});
+			mm.add('(min-width: 481px) and (max-width: 710px)', () => {
+				tlPackages.to('.second-slide__title', {
+					keyframes: [
+						{y: "100vh", fontSize: 40,},
+						{y: "57vh", },
+						{y: "23vh",  delay: 0.2,},
+						{y: "1vh", },
+					],
+				}, "<");
+			});
+			mm.add('(max-width: 480px)', () => {
+				tlPackages.to('.second-slide__title', {
+					keyframes: [
+						{y: "100vh", fontSize: 32,},
+						{y: "57vh", },
+						{y: "23vh",  delay: 0.2,},
+						{y: "-8vh", },
+					],
+				}, "<");
+			});
+								// -------------------
+			mm.add('(min-width: 551px)', () => {
+				tlPackages.to('.second-slide__packages', {
+					keyframes: [
+						{y: "100vh"},
+						{y: "50vh",},
+						{y: "22vh", delay: 0.2},
+						{y: "-16vh",},
+					]
+				}, "<");
+			});
+			mm.add('(min-width: 481px) and (max-width: 550px)', () => {
+				tlPackages.to('.second-slide__packages', {
+					keyframes: [
+						{y: "100vh"},
+						{y: "50vh",},
+						{y: "22vh", delay: 0.2},
+						{y: "-24vh",},
+					]
+				}, "<");
+			});
+			mm.add('(max-width: 480px)', () => {
+				tlPackages.to('.second-slide__packages', {
+					keyframes: [
+						{y: "100vh"},
+						{y: "50vh",},
+						{y: "22vh", delay: 0.2},
+						{y: "-38vh",},
+					]
+				}, "<");
+			});
+			mm.add('(max-width: 480px) and (min-height: 800px)', () => {
+				tlPackages.to('.second-slide__packages', {
+					keyframes: [
+						{y: "100vh"},
+						{y: "50vh",},
+						{y: "22vh", delay: 0.2},
+						{y: "-29vh",},
+					]
+				}, "<");
+			});
 			tlPackages.timeScale(1.1);
 
 			// TIME-LINE THIRD SECTION --------------------
 			let tlOpen = gsap.timeline({
 				paused: true,
 			});
-			tlOpen.to('.second-slide__title', {
-				keyframes: [
-					{y: "-50vh", scale: 1.55,},
-				]
+			mm.add('(min-width: 1201px)', () => {
+				tlOpen.to('.second-slide__title', {
+					keyframes: [
+						{y: "-50vh",fontSize: 110,},
+					]
+				});
 			});
-			tlOpen.to('.second-slide__packages', {
-				keyframes: [
-					{y: "-65vh", },
-					{y: "-100vh", delay: 0.8 },
-				]
-			}, "<");
-			tlOpen.to('.second-slide__bread-img', {
-				keyframes: [
-					{scale: 1.61},
-					{scale: 1.82, delay: 0.8},
-					{scale: 2.1,},
-				]
-			}, "<");
-			tlOpen.fromTo('.third-slide__title', {
-				x: 0,
-				y: "100vh",
-				fontSize: 60,
-			},
-			{
-				keyframes: [
-					{x: 0, y: "66vh", scale: 1, fontSize: 80, },
-					{x: 0, y: "42vh", delay: 0.8, fontSize: 90,},
-					{x:"13vw", y: "18vh", fontSize: 110, delay: 0.2,  },
-				],
-			}, "<");
+			mm.add('(min-width: 769px) and (max-width: 1200px)', () => {
+				tlOpen.to('.second-slide__title', {
+					keyframes: [
+						{y: "-50vh",fontSize: 90,},
+					]
+				});
+			});
+			mm.add('(min-width: 711px) and (max-width: 768px)', () => {
+				tlOpen.to('.second-slide__title', {
+					keyframes: [
+						{y: "-50vh",fontSize: 75,},
+					]
+				});
+			});
+			mm.add('(min-width: 481px) and (max-width: 710px)', () => {
+				tlOpen.to('.second-slide__title', {
+					keyframes: [
+						{y: "-50vh",fontSize: 40,},
+					]
+				});
+			});
+			mm.add('(max-width: 480px)', () => {
+				tlOpen.to('.second-slide__title', {
+					keyframes: [
+						{y: "-50vh",fontSize: 32,},
+					]
+				});
+			});
+								// -------------------
+			mm.add('(min-width: 481px)', () => {
+				tlOpen.to('.second-slide__packages', {
+					keyframes: [
+						{y: "-65vh", },
+						{y: "-150vh", delay: 0.8 },
+					]
+				}, "<"); 
+			});
+			mm.add('(max-width: 480px)', () => {
+				tlOpen.to('.second-slide__packages', {
+					keyframes: [
+						{y: "-75vh", },
+						{y: "-150vh", delay: 0.8 },
+					]
+				}, "<"); 
+			});
+			// -------------------------
 
+			mm.add('(min-width: 769px)', () => {
+				tlOpen.to('.second-slide__bread-img', {
+					keyframes: [
+						{scale: 1.61},
+						{scale: 1.82, delay: 0.8},
+						{scale: 2.1,},
+					]
+				}, "<");
+			});
+			mm.add('(max-width: 768px)', () => {
+				tlOpen.to('.second-slide__bread-img', {
+					keyframes: [
+						{scale: 2.3},
+						{scale: 2.9, delay: 0.8},
+						{scale: 3.5,},
+					]
+				}, "<");
+			});
+			mm.add('(min-width: 769px)', () => {
+				tlOpen.fromTo('.third-slide__title', {
+					x: 0,
+					y: "100vh",
+					fontSize: 60,
+				},
+				{
+					keyframes: [
+						{x: 0, y: "66vh", scale: 1, fontSize: 80, },
+						{x: 0, y: "42vh", delay: 0.8, fontSize: 90,},
+						{x:"13vw", y: "18vh", fontSize: 110, delay: 0.2,  },
+					],
+				}, "<");
+				});
+			mm.add('(max-width: 711px) and (max-width: 768px)', () => {
+				tlOpen.fromTo('.third-slide__title', {
+					x: 0,
+					y: "100vh",
+					fontSize: 70,
+				},
+				{
+					keyframes: [
+						{x: 0, y: "66vh", },
+						{x: 0, y: "42vh", delay: 0.8,},
+						{x:0, y: "14vh", delay: 0.2,  },
+					],
+				}, "<");
+				});
+			mm.add('(min-width: 481px) and (max-width: 710px)', () => {
+				tlOpen.fromTo('.third-slide__title', {
+					x: 0,
+					y: "100vh",
+					fontSize: 50,
+				},
+				{
+					keyframes: [
+						{x: 0, y: "66vh", },
+						{x: 0, y: "42vh", delay: 0.8,},
+						{x:0, y: "14vh", delay: 0.2,  },
+					],
+				}, "<");
+				});
+			mm.add('(max-width: 480px)', () => {
+				tlOpen.fromTo('.third-slide__title', {
+					x: 0,
+					y: "100vh",
+					fontSize: 32,
+				},
+				{
+					keyframes: [
+						{x: 0, y: "66vh", },
+						{x: 0, y: "42vh", delay: 0.8,},
+						{x:0, y: "10vh", delay: 0.2,  },
+					],
+				}, "<");
+				});
 
-			tlOpen.fromTo('.third-slide__img', {
-				y: "100vh",
-				xPercent: -50,
-			}, {
-				keyframes: [
-					{xPercent: -50, y: "100vh",},
-					{xPercent: -50, y: "70vh", delay: 0.8,},
-					{xPercent: -125, y: "13vh", delay: 0.2,},
-				]
-			}, "<");
+				// ------------------------
+			mm.add('(min-width: 769px)', () => {
+				tlOpen.fromTo('.third-slide__img', {
+					y: "100vh",
+					xPercent: -50,
+				}, {
+					keyframes: [
+						{xPercent: -50, y: "100vh",},
+						{xPercent: -50, y: "70vh", delay: 0.8,},
+						{xPercent: -125, y: "13vh", delay: 0.2,},
+					]
+				}, "<");
+			});
+			mm.add('(min-width: 481px) and (max-width: 768px)', () => {
+				tlOpen.fromTo('.third-slide__img', {
+					y: "100vh",
+					xPercent: -50,
+				}, {
+					keyframes: [
+						{xPercent: -50, y: "100vh",},
+						{xPercent: -50, y: "70vh", delay: 0.8,},
+						{xPercent: -50, y: "35vh", delay: 0.2,},
+					]
+				}, "<");
+			});
+			mm.add('(max-width: 480px)', () => {
+				tlOpen.fromTo('.third-slide__img', {
+					y: "100vh",
+					xPercent: -50,
+					scale: 0.7,
+				}, {
+					keyframes: [
+						{xPercent: -50, y: "100vh",},
+						{xPercent: -50, y: "70vh", delay: 0.8,},
+						{xPercent: -50, y: "5vh", delay: 0.2,},
+					]
+				}, "<");
+			});
+
+			// OTHER MATCH MEDIA =====================================
 			
-			// MATCH MEDIA =====================================
-			let mm = gsap.matchMedia();
-			mm.add('(min-height: 1080px)', () => {
+			mm.add('(min-width:1440px) and (min-height: 1080px)', () => {
 				tlPackages.to('.second-slide__packages', {
 					keyframes: [
 						{y: "100vh"},
@@ -484,13 +949,79 @@ export class FullPage {
 					]
 				}, "<");
 			}); 
-			mm.add('(min-height: 1080px)', () => {
+			mm.add('(min-width:1440px) and (min-height: 1080px)', () => {
 				tlOpen.to('.second-slide__packages', {
 					keyframes: [
 						{y: "-50vh", delay: 0.35, },
 					]
 				}, "<");
-			}); 
+			});
+			mm.add('(min-width:1024px) and (max-height:899px)', () => {
+				tlPackages.to('.second-slide__title', {
+					keyframes: [
+						{y: "100vh", fontSize: 100,},
+						{y: "57vh", fontSize: 70,},
+						{y: "23vh", fontSize: 80, delay: 0.2,},
+						{y: "-5vh", fontSize: 100,},
+					],
+				}, "<");
+				tlPackages.to('.second-slide__packages', {
+					keyframes: [
+						{y: "100vh"},
+						{y: "50vh",},
+						{y: "22vh", delay: 0.2},
+						{y: "-31vh",},
+					]
+				}, "<");
+				tlOpen.fromTo('.third-slide__title', {
+					x: 0,
+					y: "100vh",
+					fontSize: 60,
+				},
+				{
+					keyframes: [
+						{x: 0, y: "66vh", scale: 1, fontSize: 80, },
+						{x: 0, y: "42vh", delay: 0.8, fontSize: 90,},
+						{x:"13vw", y: "12vh", fontSize: 110, delay: 0.2,  },
+					],
+				}, "<");
+				tlOpen.fromTo('.third-slide__img', {
+					y: "100vh",
+					xPercent: -50,
+				}, {
+					keyframes: [
+						{xPercent: -50, y: "100vh",},
+						{xPercent: -50, y: "70vh", delay: 0.8,},
+						{xPercent: -125, y: "6vh", delay: 0.2,},
+					]
+				}, "<");
+			});
+			mm.add('(min-width:769px) and (max-width:1023px) and (min-height:700px)', () => {
+				tlOpen.fromTo('.third-slide__title', {
+					x: 0,
+					y: "100vh",
+					fontSize: 50,
+				},
+				{
+					keyframes: [
+						{x: 0, y: "66vh", scale: 1, fontSize: 60, },
+						{x: 0, y: "42vh", delay: 0.8, fontSize: 70,},
+						{x:"13vw", y: "12vh", fontSize: 80, delay: 0.2,  },
+					],
+				}, "<");
+				tlOpen.fromTo('.third-slide__img', {
+					y: "100vh",
+					xPercent: -50,
+				}, {
+					keyframes: [
+						{xPercent: -50, y: "100vh",},
+						{xPercent: -50, y: "70vh", delay: 0.8,},
+						{xPercent: -112, y: "20vh", delay: 0.2,},
+					]
+				}, "<");
+			});
+
+			
 			// ==============================================
 			
 			if (index === this.activeSectionId) {
@@ -498,11 +1029,11 @@ export class FullPage {
 				section.style.pointerEvents = 'all';
 				//section.style.visibility = 'visible';
 			
-				if (section.classList.contains('starting-next') && section.classList.contains('active-section')) {
+				if (section.classList.contains('first-section') && section.classList.contains('active-section')) {
 					timeline.play();
-					document.querySelector('.starting-next').style.pointerEvents = "none";
+					document.querySelector('.first-section').style.pointerEvents = "none";
 					setTimeout(() => {
-						document.querySelector('.starting-next').style.pointerEvents = "all";
+						document.querySelector('.first-section').style.pointerEvents = "all";
 					}, 3500);
 				} 
 				
@@ -510,8 +1041,10 @@ export class FullPage {
 					tlGrenka.play();
 					tlPackages.play();
 					document.querySelector('.second').style.pointerEvents = "none";
+					document.querySelector('.first-section').style.opacity = 1;
 					setTimeout(() => {
 						document.querySelector('.second').style.pointerEvents = "all";
+						document.querySelector('.first-section').style.opacity = 0;
 					}, 2500);
 				} 
 				
