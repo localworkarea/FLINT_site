@@ -441,7 +441,14 @@
      }
     }
     .fp-section-2 & {
-     opacity: 0;
+      animation: mouse-text-opacity-1 3.5s ease-in-out 0s 1 forwards normal;
+      @media (max-width:$mobile){
+        animation: mouse-text-opacity-mob-1 2.5s ease-in-out 0s 1 forwards normal; 
+      }
+      @media (max-width:$mobileSmall){
+        animation: mouse-text-opacity-sm-1 2.5s ease-in-out 0s 1 forwards normal;
+      }
+
     }
     .fp-section-3 & {
       animation: mouse-text-opacity-2 2.8s ease-in 0s 1 forwards normal;
@@ -460,6 +467,18 @@
       10%{opacity: 0;}
       80%{opacity: 0;}
       100%{opacity: 1; bottom: 15%;}
+    }
+    @keyframes mouse-text-opacity-1 {
+      0%{opacity: 1; bottom: 15%;}
+      10%{opacity: 0;}
+      80%{opacity: 0;}
+      100%{opacity: 1; bottom: 15%;}
+    }
+    @keyframes mouse-text-opacity-mob-1 {
+      0%{opacity: 1; bottom: 15%;}
+      10%{opacity: 0;}
+      80%{opacity: 0;}
+      100%{opacity: 1; bottom: 36%;}
     }
     @keyframes mouse-text-opacity-sm {
       0%{opacity: 1;}
@@ -481,6 +500,11 @@
       0%{opacity: 0; left: 50%;}
       90%{opacity: 0; left: 80%;}
       100%{opacity: 1; left: 80%; bottom: 9%;}
+    }
+    @keyframes mouse-text-opacity-sm-1 {
+      0%{opacity: 0; }
+      90%{opacity: 0;}
+      100%{opacity: 1; bottom: 18%;}
     }
   }
   // .mouse__text-mouse

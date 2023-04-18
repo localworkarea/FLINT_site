@@ -23,9 +23,9 @@ import { flsModules } from "../files/modules.js";
 	fpdestroy
 	fpswitching
 */
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger.js";
-// import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger.js";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
 
 
 
@@ -845,6 +845,7 @@ export class FullPage {
 				tlOpen.fromTo('.third-slide__title', {
 					x: 0,
 					y: "100vh",
+					xPercent: -50,
 					fontSize: 60,
 				},
 				{
@@ -855,10 +856,11 @@ export class FullPage {
 					],
 				}, "<");
 				});
-			mm.add('(max-width: 711px) and (max-width: 768px)', () => {
+			mm.add('(min-width: 711px) and (max-width: 768px)', () => {
 				tlOpen.fromTo('.third-slide__title', {
 					x: 0,
 					y: "100vh",
+					xPercent: -50,
 					fontSize: 70,
 				},
 				{
@@ -873,6 +875,7 @@ export class FullPage {
 				tlOpen.fromTo('.third-slide__title', {
 					x: 0,
 					y: "100vh",
+					xPercent: -50,
 					fontSize: 50,
 				},
 				{
@@ -887,6 +890,7 @@ export class FullPage {
 				tlOpen.fromTo('.third-slide__title', {
 					x: 0,
 					y: "100vh",
+					xPercent: -50,
 					fontSize: 32,
 				},
 				{
@@ -1248,7 +1252,7 @@ export class FullPage {
 		// Чи дозволено перехід? 
 		this.checkScroll(yCoord, targetElement);
 		// Перехід
-		if (this.goScroll && Math.abs(yCoord) > 50) {
+		if (this.goScroll && Math.abs(yCoord) > 70) {
 			this.choiceOfDirection(yCoord);
 		}
 	}

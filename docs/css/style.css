@@ -1200,7 +1200,8 @@ body {
 }
 
 .fp-section-2 .mouse__text {
-  opacity: 0;
+  -webkit-animation: mouse-text-opacity-1 3.5s ease-in-out 0s 1 forwards normal;
+          animation: mouse-text-opacity-1 3.5s ease-in-out 0s 1 forwards normal;
 }
 
 .fp-section-3 .mouse__text {
@@ -1247,6 +1248,86 @@ body {
   100% {
     opacity: 1;
     bottom: 15%;
+  }
+}
+
+@-webkit-keyframes mouse-text-opacity-1 {
+  0% {
+    opacity: 1;
+    bottom: 15%;
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 15%;
+  }
+}
+
+@keyframes mouse-text-opacity-1 {
+  0% {
+    opacity: 1;
+    bottom: 15%;
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 15%;
+  }
+}
+
+@-webkit-keyframes mouse-text-opacity-mob-1 {
+  0% {
+    opacity: 1;
+    bottom: 15%;
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 36%;
+  }
+}
+
+@keyframes mouse-text-opacity-mob-1 {
+  0% {
+    opacity: 1;
+    bottom: 15%;
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 36%;
   }
 }
 
@@ -1393,6 +1474,36 @@ body {
     opacity: 1;
     left: 80%;
     bottom: 9%;
+  }
+}
+
+@-webkit-keyframes mouse-text-opacity-sm-1 {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 18%;
+  }
+}
+
+@keyframes mouse-text-opacity-sm-1 {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 18%;
   }
 }
 
@@ -2281,6 +2392,11 @@ body {
             animation: mouse-move-mob-4 3.5s ease-in-out 0s 1 forwards normal;
   }
 
+  .fp-section-2 .mouse__text {
+    -webkit-animation: mouse-text-opacity-mob-1 2.5s ease-in-out 0s 1 forwards normal;
+            animation: mouse-text-opacity-mob-1 2.5s ease-in-out 0s 1 forwards normal;
+  }
+
   .fp-section-3 .mouse__text {
     -webkit-animation: mouse-text-opacity-mob-2 2.8s ease-in 0s 1 forwards normal;
             animation: mouse-text-opacity-mob-2 2.8s ease-in 0s 1 forwards normal;
@@ -2524,6 +2640,11 @@ body {
   .fp-section-1 .mouse__text {
     -webkit-animation: mouse-text-opacity-sm 3.5s ease-in-out 0s 1 forwards normal;
             animation: mouse-text-opacity-sm 3.5s ease-in-out 0s 1 forwards normal;
+  }
+
+  .fp-section-2 .mouse__text {
+    -webkit-animation: mouse-text-opacity-sm-1 2.5s ease-in-out 0s 1 forwards normal;
+            animation: mouse-text-opacity-sm-1 2.5s ease-in-out 0s 1 forwards normal;
   }
 
   .fp-section-3 .mouse__text {
