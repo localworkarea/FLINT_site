@@ -1827,6 +1827,10 @@ body {
   line-height: 1.1;
 }
 
+.grenka__paper-text.small-text {
+  font-size: 2.4375rem;
+}
+
 .grenka__img {
   position: absolute;
   top: 50%;
@@ -2269,9 +2273,24 @@ body {
 }
 
 @media (min-width: 769px) {
-  .background-page__start-next {
+  .background-page__start-next.taste-first-bg {
     background: -o-radial-gradient(50% 50%, 42.47% 85.84%, #00D0DE 0%, #008891 69.79%), -o-radial-gradient(50% 50%, 42.47% 85.84%, #944E1B 0%, #552503 100%);
     background: radial-gradient(42.47% 85.84% at 50% 50%, #00D0DE 0%, #008891 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
+  }
+
+  .background-page__start-next.taste-second-bg {
+    background: -o-radial-gradient(50% 50%, 42.47% 85.84%, #FFFBD5 0%, #FFDB5B 69.79%);
+    background: radial-gradient(42.47% 85.84% at 50% 50%, #FFFBD5 0%, #FFDB5B 69.79%);
+  }
+
+  .background-page__start-next.taste-third-bg {
+    background: -o-radial-gradient(50% 50%, 42.47% 85.84%, #45FFC7 0%, #1FB893 69.79%), -o-radial-gradient(50% 50%, 42.47% 85.84%, #944E1B 0%, #552503 100%);
+    background: radial-gradient(42.47% 85.84% at 50% 50%, #45FFC7 0%, #1FB893 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
+  }
+
+  .background-page__start-next.taste-fourth-bg {
+    background: -o-radial-gradient(50% 50%, 42.47% 85.84%, #FFD1BE 0%, #FF4F18 69.79%), -o-radial-gradient(50% 50%, 42.47% 85.84%, #944E1B 0%, #552503 100%);
+    background: radial-gradient(42.47% 85.84% at 50% 50%, #FFD1BE 0%, #FF4F18 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
   }
 
   .background-page__second {
@@ -2289,9 +2308,24 @@ body {
     background: radial-gradient(42.47% 85.84% at 50% 50%, #047069 0%, #00393D 100%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
   }
 
-  .background-page__last {
+  .background-page__last.taste-first-bg {
     background: -o-radial-gradient(50% 50%, 42.47% 85.84%, #00D0DE 0%, #008891 69.79%), -o-radial-gradient(50% 50%, 42.47% 85.84%, #944E1B 0%, #552503 100%);
     background: radial-gradient(42.47% 85.84% at 50% 50%, #00D0DE 0%, #008891 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
+  }
+
+  .background-page__last.taste-second-bg {
+    background: -o-radial-gradient(50% 50%, 42.47% 85.84%, #FFFBD5 0%, #FFDB5B 69.79%);
+    background: radial-gradient(42.47% 85.84% at 50% 50%, #FFFBD5 0%, #FFDB5B 69.79%);
+  }
+
+  .background-page__last.taste-third-bg {
+    background: -o-radial-gradient(50% 50%, 42.47% 85.84%, #45FFC7 0%, #1FB893 69.79%), -o-radial-gradient(50% 50%, 42.47% 85.84%, #944E1B 0%, #552503 100%);
+    background: radial-gradient(42.47% 85.84% at 50% 50%, #45FFC7 0%, #1FB893 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
+  }
+
+  .background-page__last.taste-fourth-bg {
+    background: -o-radial-gradient(50% 50%, 42.47% 85.84%, #FFD1BE 0%, #FF4F18 69.79%), -o-radial-gradient(50% 50%, 42.47% 85.84%, #944E1B 0%, #552503 100%);
+    background: radial-gradient(42.47% 85.84% at 50% 50%, #FFD1BE 0%, #FF4F18 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
   }
 }
 
@@ -2357,6 +2391,10 @@ body {
   .grenka__paper-text {
     max-width: 35.625rem;
     font-size: 2.625rem;
+  }
+
+  .grenka__paper-text.small-text {
+    font-size: 1.875rem;
   }
 }
 
@@ -2489,6 +2527,10 @@ body {
     font-size: 1.75rem;
     left: unset;
     right: 0;
+  }
+
+  .grenka__paper-text.small-text {
+    font-size: 1.4375rem;
   }
 }
 
@@ -2668,6 +2710,10 @@ body {
   .grenka__paper-text {
     font-size: 1.375rem;
     max-width: 18.75rem;
+  }
+
+  .grenka__paper-text.small-text {
+    font-size: 1.0625rem;
   }
 
   .fourth .fourth-slide__title {

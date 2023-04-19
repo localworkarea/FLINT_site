@@ -15,15 +15,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    // @media (max-width:$mobile){
-    //    height: 100%; 
-    // }
-    // @media (max-width:$mobileSmall){
-    //     height: rem(550);
-    // }
-    // @media (max-width:$mobileXS){
-    //     height: rem(400);
-    // }
   }
 
 		// .background-page__start
@@ -36,8 +27,25 @@
 		// .background-page__start-next
 		&__start-next {
       transition: opacity 1s ease-in-out 0s;
-      @media (min-width: 769px) {
-        background: radial-gradient(42.47% 85.84% at 50% 50%, #00D0DE 0%, #008891 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);        
+      &.taste-first-bg {
+        @media (min-width: 769px) {
+          background: radial-gradient(42.47% 85.84% at 50% 50%, #00D0DE 0%, #008891 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);        
+        }
+      }
+      &.taste-second-bg {
+        @media (min-width: 769px) {
+          background: radial-gradient(42.47% 85.84% at 50% 50%, #FFFBD5 0%, #FFDB5B 69.79%);
+        }
+      }
+      &.taste-third-bg {
+        @media (min-width: 769px) {
+          background: radial-gradient(42.47% 85.84% at 50% 50%, #45FFC7 0%, #1FB893 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
+        }
+      }
+      &.taste-fourth-bg {
+        @media (min-width: 769px) {
+          background: radial-gradient(42.47% 85.84% at 50% 50%, #FFD1BE 0%, #FF4F18 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
+        }
       }
       .background-page__img {
         display: none;
@@ -53,9 +61,9 @@
 		&__second {
       opacity: 0;
       transition: opacity 1s ease-in-out 0s;
-      @media (min-width: 769px) {
-        background: radial-gradient(42.47% 85.84% at 50% 50%, #FFF3EA 0%, #F7E0CF 100%), radial-gradient(42.47% 85.84% at 50% 50%, #00D0DE 0%, #008891 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #00EFE1 0%, #008891 100%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
-      }
+        @media (min-width: 769px) {
+          background: radial-gradient(42.47% 85.84% at 50% 50%, #FFF3EA 0%, #F7E0CF 100%), radial-gradient(42.47% 85.84% at 50% 50%, #00D0DE 0%, #008891 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #00EFE1 0%, #008891 100%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
+        }
       .background-page__img {
         display: none;
         @media (max-width:768px){
@@ -70,9 +78,9 @@
 		&__third {
       opacity: 0;
       transition: opacity 1s ease-in-out 0s;
-      @media (min-width: 769px) {
-        background: radial-gradient(42.47% 85.84% at 50% 50%, #FFFADE 0%, #F4ECA0 100%), radial-gradient(42.47% 85.84% at 50% 50%, #CCFBD7 0%, #A3EDB4 100%), radial-gradient(42.47% 85.84% at 50% 50%, #FFF3EA 0%, #F7E0CF 100%), radial-gradient(42.47% 85.84% at 50% 50%, #00D0DE 0%, #008891 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #00EFE1 0%, #008891 100%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
-      }
+        @media (min-width: 769px) {
+          background: radial-gradient(42.47% 85.84% at 50% 50%, #FFFADE 0%, #F4ECA0 100%), radial-gradient(42.47% 85.84% at 50% 50%, #CCFBD7 0%, #A3EDB4 100%), radial-gradient(42.47% 85.84% at 50% 50%, #FFF3EA 0%, #F7E0CF 100%), radial-gradient(42.47% 85.84% at 50% 50%, #00D0DE 0%, #008891 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #00EFE1 0%, #008891 100%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
+        }
       .background-page__img {
         display: none;
         @media (max-width:768px){
@@ -87,9 +95,9 @@
 		&__fourth {
       opacity: 0;
       transition: opacity 1s ease-in-out 0s;
-      @media (min-width: 769px) {
-        background: radial-gradient(42.47% 85.84% at 50% 50%, #047069 0%, #00393D 100%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
-      }
+        @media (min-width: 769px) {
+          background: radial-gradient(42.47% 85.84% at 50% 50%, #047069 0%, #00393D 100%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
+        }
       .background-page__img {
         display: none;
         @media (max-width:768px){
@@ -104,8 +112,25 @@
   // .background-page__last
   &__last {
     opacity: 0;
-    @media (min-width: 769px) {
-      background: radial-gradient(42.47% 85.84% at 50% 50%, #00D0DE 0%, #008891 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
+    &.taste-first-bg {
+      @media (min-width: 769px) {
+        background: radial-gradient(42.47% 85.84% at 50% 50%, #00D0DE 0%, #008891 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);        
+      }
+    }
+    &.taste-second-bg {
+      @media (min-width: 769px) {
+        background: radial-gradient(42.47% 85.84% at 50% 50%, #FFFBD5 0%, #FFDB5B 69.79%);
+      }
+    }
+    &.taste-third-bg {
+      @media (min-width: 769px) {
+        background: radial-gradient(42.47% 85.84% at 50% 50%, #45FFC7 0%, #1FB893 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
+      }
+    }
+    &.taste-fourth-bg {
+      @media (min-width: 769px) {
+        background: radial-gradient(42.47% 85.84% at 50% 50%, #FFD1BE 0%, #FF4F18 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
+      }
     }
     .background-page__img {
       display: none;
@@ -117,11 +142,11 @@
       opacity: 1;
     }
   }
- 
-  
- 
-
 }
+
+.taste-second-bg {}
+.taste-third-bg {}
+.taste-fourth-bg {}
 
 
 // REFRESH TEXT and BUTTON =====================================
