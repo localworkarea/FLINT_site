@@ -34,7 +34,7 @@ class Popup {
 			closeEsc: true, // Закриття ESC
 			bodyLock: true, // Блокування скролла
 			hashSettings: {
-				location: true, // Хеш в адресному рядку
+				location: false, // Хеш в адресному рядку
 				goHash: true, // Перехід по наявності в адресному рядку
 			},
 			on: { // Події
@@ -102,7 +102,7 @@ class Popup {
 		this.options.init ? this.initPopups() : null
 	}
 	initPopups() {
-		this.popupLogging(`Прокинувся`);
+		// this.popupLogging(`Прокинувся`);
 		this.eventsPopup();
 	}
 	eventsPopup() {
@@ -125,7 +125,7 @@ class Popup {
 					this.open();
 					return;
 
-				} else this.popupLogging(`Йой, не заповнено атрибут у ${buttonOpen.classList}`);
+				};
 
 				return;
 			}
@@ -250,9 +250,9 @@ class Popup {
 						popup: this
 					}
 				}));
-				this.popupLogging(`Відкрив попап`);
+				// this.popupLogging(`Відкрив попап`);
 
-			} else this.popupLogging(`Йой, такого попапу немає. Перевірте коректність введення. `);
+			};
 		}
 	}
 	close(selectorValue) {
@@ -304,7 +304,7 @@ class Popup {
 			this._focusTrap();
 		}, 50);
 
-		this.popupLogging(`Закрив попап`);
+		// this.popupLogging(`Закрив попап`);
 	}
 	// Отримання хешу 
 	_getHash() {
@@ -356,9 +356,9 @@ class Popup {
 		}
 	}
 	// Функція виведення в консоль
-	popupLogging(message) {
-		this.options.logging ? FLS(`[Попапос]: ${message}`) : null;
-	}
+	// popupLogging(message) {
+	// 	this.options.logging ? FLS(`[Попапос]: ${message}`) : null;
+	// }
 }
 // Запускаємо та додаємо в об'єкт модулів
 flsModules.popup = new Popup({});

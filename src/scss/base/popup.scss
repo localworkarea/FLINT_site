@@ -20,10 +20,13 @@ body::after {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	padding: 30px 10px;
-	transition: visibility 0.8s ease 0s;
+	padding: 40px;
+	transition: visibility 0.6s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
+	@media (max-width:375px){
+		  padding: rem(20);
+	}
 }
 .popup_show {
 	z-index: 150;
@@ -50,12 +53,64 @@ body::after {
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.607);
+	padding: 5px;
 	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
+	max-width: 1150px;
+	border-radius: 8px;
+	position: relative;
+	@media (max-width:1200px){
+		max-width: rem(720);
+	}
+	iframe {
+		width: 100%;
+		height:rem(640);
+		@media (max-width:1200px){
+			  height: rem(400);
+		}
+		@media (max-width:$mobile){
+			 height: 380px; 
+		}
+		@media (max-width:375px){
+			  height: rem(290);
+		}
+	}
 	.lock & {
 		visibility: visible;
+	}
+	@media (max-width:$tablet){
+		
+	}
+}
+.popup__close {
+	position: absolute;
+	top: rem(-30);
+	right: rem(-30);
+	width: rem(30);
+	height: rem(30);
+	outline: none;
+	@media (max-width:375px){
+		  right: 0;
+			top: -40px;
+	}
+	span {
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: rem(30);
+			height: rem(2);
+			background-color: white;
+			border-radius: rem(3);
+		}
+		&::before {
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		&::after {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
 	}
 }

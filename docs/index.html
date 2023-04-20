@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230419131305">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230420183906">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,6 +73,7 @@
 						<div class="grenka__paper">
 							<picture><source srcset="img/paper-cut.webp" type="image/webp"><img class="grenka__paper-img" src="img/paper-cut.png" alt="paper"></picture>
 							<div class="grenka__paper-text">Ти щасливчик, який розгорнув послання інопланетного розуму.</div>
+							<!-- <div class="grenka__paper-text">Ще невідомі обставини, але сьогодні ти відкриєш в собі йога, бо стояння на голові після важкого дня – єдиний спосіб розрядки</div> -->
 						</div>
 					</div>
 				</div>
@@ -106,7 +107,7 @@
 							<div class="fourth-slide__wrapper swiper-wrapper">
 								<div class="fourth-slide__slide swiper-slide">
 									<picture><source srcset="img/video-02.webp" type="image/webp"><img src="img/video-02.png" class="swiper-slide__image" alt="image"></picture>
-									<a href="#" class="swiper-slide__play">
+									<a href="#" data-popup="#popup-01" data-popup-youtube="dSCUbBDKHTQ" class="swiper-slide__play">
 										<span></span>
 										<div class="swiper-slide__icon">
 											<img class="" src="img/icons/play.svg" alt="mouse">
@@ -115,7 +116,7 @@
 								</div>
 								<div class="fourth-slide__slide swiper-slide">
 									<picture><source srcset="img/video-01.webp" type="image/webp"><img src="img/video-01.png" class="swiper-slide__image" alt="image"></picture>
-									<a href="#" class="swiper-slide__play">
+									<a href="#" data-popup="#popup-02" data-popup-youtube="mHTSQZC_F_A" class="swiper-slide__play">
 										<span></span>
 										<div class="swiper-slide__icon">
 											<img class="" src="img/icons/play.svg" alt="mouse">
@@ -124,7 +125,7 @@
 								</div>
 								<div class="fourth-slide__slide swiper-slide">
 									<picture><source srcset="img/video-03.webp" type="image/webp"><img src="img/video-03.png" class="swiper-slide__image" alt="image"></picture>
-									<a href="#" class="swiper-slide__play">
+									<a href="#" data-popup="#popup-03" data-popup-youtube="HVRdx-EFtKY" class="swiper-slide__play">
 										<span></span>
 										<div class="swiper-slide__icon">
 											<img class="" src="img/icons/play.svg" alt="mouse">
@@ -136,7 +137,7 @@
 						<div class="fourth-slide__cards cards-fourth">
 							<div class="cards-fourth__item-ibg item-01">
 								<picture><source srcset="img/video-01.webp" type="image/webp"><img src="img/video-01.png" class="cards-fourth__img" alt="image"></picture>
-								<a href="#" class="swiper-slide__play">
+								<a href="#" data-popup="#popup-01" data-popup-youtube="dSCUbBDKHTQ" class="swiper-slide__play">
 									<span></span>
 									<div class="swiper-slide__icon">
 										<img class="" src="img/icons/play.svg" alt="mouse">
@@ -145,7 +146,7 @@
 							</div>
 							<div class="cards-fourth__item-ibg item-02">
 								<picture><source srcset="img/video-02.webp" type="image/webp"><img src="img/video-02.png" class="cards-fourth__img" alt="image"></picture>
-								<a href="#" class="swiper-slide__play">
+								<a href="#" data-popup="#popup-02" data-popup-youtube="mHTSQZC_F_A" class="swiper-slide__play">
 									<span></span>
 									<div class="swiper-slide__icon">
 										<img class="" src="img/icons/play.svg" alt="mouse">
@@ -154,7 +155,7 @@
 							</div>
 							<div class="cards-fourth__item-ibg item-03">
 								<picture><source srcset="img/video-03.webp" type="image/webp"><img src="img/video-03.png" class="cards-fourth__img" alt="image"></picture>
-								<a href="#" class="swiper-slide__play">
+								<a href="#" data-popup="#popup-03" data-popup-youtube="HVRdx-EFtKY" class="swiper-slide__play">
 									<span></span>
 									<div class="swiper-slide__icon">
 										<img class="" src="img/icons/play.svg" alt="mouse">
@@ -187,11 +188,38 @@
 		</main>
 
 	</div>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js?_v=20230419131305"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js?_v=20230419131305"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js?_v=20230419131305"></script> -->
+	<div id="popup-01" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"><span></span></button>
+				<div class="popup__text">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-02" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"><span></span></button>
+				<div class="popup__text">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-03" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"><span></span></button>
+				<div class="popup__text">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js?_v=20230420183906"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js?_v=20230420183906"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js?_v=20230420183906"></script> -->
 
-	<script src="js/app.min.js?_v=20230419131305"></script>
+	<script src="js/app.min.js?_v=20230420183906"></script>
 </body>
 
 </html>

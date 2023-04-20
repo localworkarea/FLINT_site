@@ -129,6 +129,140 @@ body {
 Сніппет (HTML): cnt
 */
 
+body::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.8s ease 0s;
+  -o-transition: opacity 0.8s ease 0s;
+  transition: opacity 0.8s ease 0s;
+  pointer-events: none;
+  z-index: 149;
+}
+
+.popup-show body::after {
+  opacity: 1;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 40px;
+  -webkit-transition: visibility 0.6s ease 0s;
+  -o-transition: visibility 0.6s ease 0s;
+  transition: visibility 0.6s ease 0s;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.popup_show {
+  z-index: 150;
+  visibility: visible;
+  overflow: auto;
+  pointer-events: auto;
+}
+
+.popup_show .popup__content {
+  visibility: visible;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.popup__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-items: center;
+}
+
+.popup__content {
+  visibility: hidden;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  background-color: rgba(0, 0, 0, 0.607);
+  padding: 5px;
+  width: 100%;
+  max-width: 1150px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.popup__content iframe {
+  width: 100%;
+  height: 40rem;
+}
+
+.lock .popup__content {
+  visibility: visible;
+}
+
+.popup__close {
+  position: absolute;
+  top: -1.875rem;
+  right: -1.875rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  outline: none;
+}
+
+.popup__close span::before,
+.popup__close span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 1.875rem;
+  height: 0.125rem;
+  background-color: white;
+  border-radius: 0.1875rem;
+}
+
+.popup__close span::before {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+      -ms-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.popup__close span::after {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+      -ms-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 .fp-init body {
   overflow: hidden;
   -ms-touch-action: none;
@@ -1817,7 +1951,7 @@ body {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   margin: 0 auto;
-  padding: 0 1.25rem 0 2.5rem;
+  padding: 0 0.9375rem 0 3.4375rem;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -2095,9 +2229,11 @@ body {
   -webkit-backdrop-filter: blur(7.5px);
           backdrop-filter: blur(7.5px);
   border-radius: 50%;
+  outline: none;
 }
 
 .fourth .swiper-slide__play span {
+  outline: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2117,6 +2253,7 @@ body {
 
 .fourth .swiper-slide__play span::before,
 .fourth .swiper-slide__play span::after {
+  outline: none;
   content: "";
   position: absolute;
   top: 50%;
@@ -2379,6 +2516,14 @@ body {
 }
 
 @media (max-width: 1200px) {
+  .popup__content {
+    max-width: 45rem;
+  }
+
+  .popup__content iframe {
+    height: 25rem;
+  }
+
   .grenka__paper {
     width: 38.5625rem;
   }
@@ -2399,6 +2544,10 @@ body {
 }
 
 @media (max-width: 48em) {
+  .popup__content iframe {
+    height: 380px;
+  }
+
   .touch [data-fp] {
     -webkit-transition: height 0.2s;
     -o-transition: height 0.2s;
@@ -2722,6 +2871,21 @@ body {
 
   .fourth .fourth-slide__refresh {
     font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .popup {
+    padding: 1.25rem;
+  }
+
+  .popup__content iframe {
+    height: 18.125rem;
+  }
+
+  .popup__close {
+    right: 0;
+    top: -40px;
   }
 }
 

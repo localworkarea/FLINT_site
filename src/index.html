@@ -60,6 +60,7 @@
 							<div class="grenka__paper">
 								<img class="grenka__paper-img" src="@img/paper-cut.png" alt="paper">
 								<div class="grenka__paper-text">Ти щасливчик, який розгорнув послання інопланетного розуму.</div>
+								<!-- <div class="grenka__paper-text">Ще невідомі обставини, але сьогодні ти відкриєш в собі йога, бо стояння на голові після важкого дня – єдиний спосіб розрядки</div> -->
 							</div>
 						</div>
 					</div>
@@ -93,7 +94,7 @@
 								<div class="fourth-slide__wrapper swiper-wrapper">
 									<div class="fourth-slide__slide swiper-slide">
 										<img src="@img/video-02.png" class="swiper-slide__image" alt="image">
-										<a href="#" class="swiper-slide__play">
+										<a href="#" data-popup="#popup-01" data-popup-youtube="dSCUbBDKHTQ" class="swiper-slide__play">
 											<span></span>
 											<div class="swiper-slide__icon">
 												<img class="" src="@img/icons/play.svg" alt="mouse">
@@ -102,7 +103,7 @@
 									</div>
 									<div class="fourth-slide__slide swiper-slide">
 										<img src="@img/video-01.png" class="swiper-slide__image" alt="image">
-										<a href="#" class="swiper-slide__play">
+										<a href="#" data-popup="#popup-02" data-popup-youtube="mHTSQZC_F_A" class="swiper-slide__play">
 											<span></span>
 											<div class="swiper-slide__icon">
 												<img class="" src="@img/icons/play.svg" alt="mouse">
@@ -111,7 +112,7 @@
 									</div>
 									<div class="fourth-slide__slide swiper-slide">
 										<img src="@img/video-03.png" class="swiper-slide__image" alt="image">
-										<a href="#" class="swiper-slide__play">
+										<a href="#" data-popup="#popup-03" data-popup-youtube="HVRdx-EFtKY" class="swiper-slide__play">
 											<span></span>
 											<div class="swiper-slide__icon">
 												<img class="" src="@img/icons/play.svg" alt="mouse">
@@ -123,7 +124,7 @@
 							<div class="fourth-slide__cards cards-fourth">
 								<div class="cards-fourth__item-ibg item-01">
 									<img src="@img/video-01.png" class="cards-fourth__img" alt="image">
-									<a href="#" class="swiper-slide__play">
+									<a href="#" data-popup="#popup-01" data-popup-youtube="dSCUbBDKHTQ" class="swiper-slide__play">
 										<span></span>
 										<div class="swiper-slide__icon">
 											<img class="" src="@img/icons/play.svg" alt="mouse">
@@ -132,7 +133,7 @@
 								</div>
 								<div class="cards-fourth__item-ibg item-02">
 									<img src="@img/video-02.png" class="cards-fourth__img" alt="image">
-									<a href="#" class="swiper-slide__play">
+									<a href="#" data-popup="#popup-02" data-popup-youtube="mHTSQZC_F_A" class="swiper-slide__play">
 										<span></span>
 										<div class="swiper-slide__icon">
 											<img class="" src="@img/icons/play.svg" alt="mouse">
@@ -141,7 +142,7 @@
 								</div>
 								<div class="cards-fourth__item-ibg item-03">
 									<img src="@img/video-03.png" class="cards-fourth__img" alt="image">
-									<a href="#" class="swiper-slide__play">
+									<a href="#" data-popup="#popup-03" data-popup-youtube="HVRdx-EFtKY" class="swiper-slide__play">
 										<span></span>
 										<div class="swiper-slide__icon">
 											<img class="" src="@img/icons/play.svg" alt="mouse">
@@ -174,6 +175,7 @@
 			</main>
 
 		</div>
+		@@include('html/_popup.htm',{})
 		@@include('html/_js.htm',{})
 	</body>
 </html>
