@@ -601,6 +601,8 @@
 		// .cards-fourth__item-ibg
 		&__item-ibg {
       padding-bottom: 56%;
+      border-radius: rem(20);
+      overflow: hidden;
       &.item-01 {
         grid-column-start: 1;
         grid-column-end: 3;

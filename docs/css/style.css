@@ -2288,6 +2288,8 @@ body::after {
 
 .fourth .cards-fourth__item-ibg {
   padding-bottom: 56%;
+  border-radius: 1.25rem;
+  overflow: hidden;
 }
 
 .fourth .cards-fourth__item-ibg.item-01 {
