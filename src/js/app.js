@@ -12,7 +12,7 @@
 */
 
 // Увімкнути/вимкнути FLS (Full Logging System) (в роботі)
-window['FLS'] = true;
+window['FLS'] =  false;
 
 // Підключення основного файлу стилів
 import "../scss/style.scss";
@@ -32,7 +32,7 @@ flsFunctions.addLoadedClass();
 /* Модуль для роботи з меню (Бургер) */
 // flsFunctions.menuInit();
 /* Враховування плаваючої панелі на мобільних пристроях при 100vh */
-flsFunctions.fullVHfix();
+// flsFunctions.fullVHfix();
 /* Форматування чисел */
 // import './libs/wNumb.min.js';
 

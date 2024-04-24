@@ -50,9 +50,9 @@
 						</div>
 						<div class="first__images">
 							<!--CHANGE-->	
-							<img class="first__img-02" src="@img/grenki-open-03-2.png" alt="grenki">
+							<img class="first__img-02" src="@img/grenki-open-01-2.png" alt="grenki">
 							<!--CHANGE-->	
-							<img class="first__img-01" src="@img/grenki-open-03-1.png" alt="grenki">
+							<img class="first__img-01" src="@img/grenki-open-01-1.png" alt="grenki">
 						</div>
 						<!--CHANGE-->	
 						<img class="grenka__img" src="@img/grenka-two.png" alt="bread">
@@ -60,7 +60,6 @@
 							<div class="grenka__paper">
 								<img class="grenka__paper-img" src="@img/paper-cut.png" alt="paper">
 								<div class="grenka__paper-text">Ти щасливчик, який розгорнув послання інопланетного розуму.</div>
-								<!-- <div class="grenka__paper-text">Ще невідомі обставини, але сьогодні ти відкриєш в собі йога, бо стояння на голові після важкого дня – єдиний спосіб розрядки</div> -->
 							</div>
 						</div>
 					</div>
@@ -69,10 +68,13 @@
 					<div class="second-slide">
 						<h2 class="second-slide__title">А міг би відкрити<br> пачку крафтових...</h2>
 						<div class="second-slide__packages">
-							<img src="@img/grenki_04.png" class="second-slide__pack pack-04" alt="package">
-							<img src="@img/grenki_01.png" class="second-slide__pack pack-01" alt="package">
-							<img src="@img/grenki_02.png" class="second-slide__pack pack-02" alt="package">
-							<img src="@img/grenki_03.png" class="second-slide__pack pack-03" alt="package">
+							<picture>
+								<source media="(max-width: 992px)" rcset="@img/grenki_group-mob-2.webp" type="image/webp">
+								<source media="(max-width: 992px)" srcset="@img/grenki_group-mob-2.png" type="image/png">
+								<source srcset="@img/grenki_group.webp" type="image/webp">
+								<source srcset="@img/grenki_group.png" type="image/png">
+								<img class="second-slide__pack" src="@img/grenki_group.png" alt="Описание изображения">
+							</picture>
 						</div>
 					</div>
 					<div class="second-slide__bread">

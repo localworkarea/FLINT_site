@@ -309,9 +309,9 @@
   }
   .fp-section-2 & {
     animation: mouse-move-2 2.5s ease-in-out 0s 1 forwards normal;
-    @media (max-width:$mobile){
-      animation: mouse-move-mob-2 2.5s ease-in-out 0s 1 forwards normal; 
-    }
+    // @media (max-width:$mobile){
+    //   animation: mouse-move-mob-2 2.5s ease-in-out 0s 1 forwards normal; 
+    // }
     @media (max-width:$mobileSmall){
       animation: mouse-move-sm-2 2.5s ease-in-out 0s 1 forwards normal;
     }
@@ -467,9 +467,9 @@
     }
     .fp-section-2 & {
       animation: mouse-text-opacity-1 3.5s ease-in-out 0s 1 forwards normal;
-      @media (max-width:$mobile){
-        animation: mouse-text-opacity-mob-1 2.5s ease-in-out 0s 1 forwards normal; 
-      }
+      // @media (max-width:$mobile){
+      //   animation: mouse-text-opacity-mob-1 2.5s ease-in-out 0s 1 forwards normal; 
+      // }
       @media (max-width:$mobileSmall){
         animation: mouse-text-opacity-sm-1 2.5s ease-in-out 0s 1 forwards normal;
       }

@@ -44,17 +44,6 @@
             }), 0);
         }));
     }
-    function fullVHfix() {
-        const fullScreens = document.querySelectorAll("[data-fullscreen]");
-        if (fullScreens.length && isMobile.any()) {
-            window.addEventListener("resize", fixHeight);
-            function fixHeight() {
-                let vh = window.innerHeight * .01;
-                document.documentElement.style.setProperty("--vh", `${vh}px`);
-            }
-            fixHeight();
-        }
-    }
     let bodyLockStatus = true;
     let bodyUnlock = (delay = 500) => {
         let body = document.querySelector("body");
@@ -8280,9 +8269,8 @@
             }));
         }
     }), 0);
-    window["FLS"] = true;
+    window["FLS"] = false;
     isWebp();
     addTouchClass();
     addLoadedClass();
-    fullVHfix();
 })();

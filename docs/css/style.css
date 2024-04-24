@@ -1995,6 +1995,8 @@ body::after {
   text-align: center;
   margin-top: 7rem;
   margin-bottom: 13.4375rem;
+  position: relative;
+  z-index: 2;
   -webkit-transform: translateY(100vh);
       -ms-transform: translateY(100vh);
           transform: translateY(100vh);
@@ -2003,8 +2005,8 @@ body::after {
 .second .second-slide__packages {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 25.375rem auto auto 25.375rem;
-  grid-template-columns: 25.375rem auto auto 25.375rem;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
@@ -2014,7 +2016,6 @@ body::after {
   -webkit-transform: translateY(100vh);
       -ms-transform: translateY(100vh);
           transform: translateY(100vh);
-  will-change: transform;
 }
 
 .second .second-slide__pack {
@@ -2499,24 +2500,6 @@ body::after {
   }
 }
 
-@media (max-width: 1550px) {
-  .second .second-slide__packages {
-    -ms-grid-columns: auto auto auto auto;
-    grid-template-columns: auto auto auto auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
-  .second .second-slide__packages .pack-01 {
-    scale: 0.9;
-  }
-
-  .second .second-slide__packages .pack-02 {
-    scale: 0.9;
-  }
-}
-
 @media (max-width: 1200px) {
   .popup__content {
     max-width: 45rem;
@@ -2566,11 +2549,6 @@ body::after {
             animation: refresh-move-up-mob-2 2.5s cubic-bezier(0.55, 0.085, 0, 0.99) 0s forwards normal;
   }
 
-  .fp-section-2 .mouse {
-    -webkit-animation: mouse-move-mob-2 2.5s ease-in-out 0s 1 forwards normal;
-            animation: mouse-move-mob-2 2.5s ease-in-out 0s 1 forwards normal;
-  }
-
   .fp-section-3 .mouse {
     -webkit-animation: mouse-move-mob-3 3.8s ease-in-out 0s 1 forwards normal;
             animation: mouse-move-mob-3 3.8s ease-in-out 0s 1 forwards normal;
@@ -2581,11 +2559,6 @@ body::after {
             animation: mouse-move-mob-4 3.5s ease-in-out 0s 1 forwards normal;
   }
 
-  .fp-section-2 .mouse__text {
-    -webkit-animation: mouse-text-opacity-mob-1 2.5s ease-in-out 0s 1 forwards normal;
-            animation: mouse-text-opacity-mob-1 2.5s ease-in-out 0s 1 forwards normal;
-  }
-
   .fp-section-3 .mouse__text {
     -webkit-animation: mouse-text-opacity-mob-2 2.8s ease-in 0s 1 forwards normal;
             animation: mouse-text-opacity-mob-2 2.8s ease-in 0s 1 forwards normal;
@@ -2593,12 +2566,6 @@ body::after {
 
   .second .second-slide {
     padding: 0 1.25rem;
-  }
-
-  .second .second-slide__packages {
-    -ms-grid-columns: auto auto;
-    grid-template-columns: auto auto;
-    max-width: 32.375rem;
   }
 
   .third .third-slide {
@@ -2867,12 +2834,22 @@ body::after {
     font-size: 1.0625rem;
   }
 
+  .second .second-slide__packages {
+    max-width: 90%;
+  }
+
   .fourth .fourth-slide__title {
     font-size: 2.5rem;
   }
 
   .fourth .fourth-slide__refresh {
     font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 30em) and (min-height: 43.81125em) {
+  .second .second-slide__packages {
+    padding-top: 3.125rem;
   }
 }
 
@@ -2941,6 +2918,12 @@ body::after {
       padding-right: calc(0.9375rem + 0.3125 * (100vw - 20rem) / 100);
     }
 }
+}
+
+@media (max-width: 61.99875em) and (min-width: 30em) {
+  .second .second-slide__packages {
+    max-width: 70%;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
