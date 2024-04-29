@@ -47,6 +47,16 @@
           background: radial-gradient(42.47% 85.84% at 50% 50%, #FFD1BE 0%, #FF4F18 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
         }
       }
+      &.taste-fifth-bg {
+        @media (min-width: 769px) {
+          background: radial-gradient(42.00% 86.00% at 50% 50%,rgb(239, 149, 136),rgb(172, 53, 34) 69.792%),rgb(255, 255, 255);
+        }
+      }
+      &.taste-sixth-bg {
+        @media (min-width: 769px) {
+          background: radial-gradient(42.00% 86.00% at 50% 50%,rgb(255, 253, 240),rgb(255, 189, 20) 69.792%),rgb(255, 255, 255);
+        }
+      }
       .background-page__img {
         display: none;
         @media (max-width:768px){
@@ -130,6 +140,16 @@
     &.taste-fourth-bg {
       @media (min-width: 769px) {
         background: radial-gradient(42.47% 85.84% at 50% 50%, #FFD1BE 0%, #FF4F18 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
+      }
+    }
+    &.taste-fifth-bg {
+      @media (min-width: 769px) {
+        background: radial-gradient(42.00% 86.00% at 50% 50%,rgb(239, 149, 136),rgb(172, 53, 34) 69.792%),rgb(255, 255, 255);
+      }
+    }
+    &.taste-sixth-bg {
+      @media (min-width: 769px) {
+        background: radial-gradient(42.00% 86.00% at 50% 50%,rgb(255, 253, 240),rgb(255, 189, 20) 69.792%),rgb(255, 255, 255);
       }
     }
     .background-page__img {

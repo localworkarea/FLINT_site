@@ -1993,8 +1993,8 @@ body::after {
   font-size: 4.375rem;
   line-height: 1;
   text-align: center;
-  margin-top: 7rem;
-  margin-bottom: 13.4375rem;
+  margin-top: 5rem;
+  margin-bottom: 11.25rem;
   position: relative;
   z-index: 2;
   -webkit-transform: translateY(100vh);
@@ -2007,9 +2007,6 @@ body::after {
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
   width: 100%;
   max-width: 93.4375rem;
   margin: 0 auto;
@@ -2288,23 +2285,9 @@ body::after {
 }
 
 .fourth .cards-fourth__item-ibg {
-  padding-bottom: 56%;
+  padding-bottom: 47%;
   border-radius: 1.25rem;
   overflow: hidden;
-}
-
-.fourth .cards-fourth__item-ibg.item-01 {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  -ms-grid-column-span: 2;
-  grid-column-end: 3;
-}
-
-.fourth .cards-fourth__item-ibg.item-02 {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  -ms-grid-column-span: 1;
-  grid-column-end: 2;
 }
 
 .fourth .cards-fourth__item-ibg.item-02 .swiper-slide__play {
@@ -2330,13 +2313,6 @@ body::after {
 
 .fourth .cards-fourth__item-ibg.item-02 .swiper-slide__icon {
   padding-left: 2px;
-}
-
-.fourth .cards-fourth__item-ibg.item-03 {
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  -ms-grid-column-span: 1;
-  grid-column-end: 3;
 }
 
 .fourth .cards-fourth__item-ibg.item-03 .swiper-slide__play {
@@ -2433,6 +2409,16 @@ body::after {
     background: radial-gradient(42.47% 85.84% at 50% 50%, #FFD1BE 0%, #FF4F18 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
   }
 
+  .background-page__start-next.taste-fifth-bg {
+    background: -o-radial-gradient(50% 50%, 42% 86%, rgb(239, 149, 136), rgb(172, 53, 34) 69.792%), rgb(255, 255, 255);
+    background: radial-gradient(42% 86% at 50% 50%, rgb(239, 149, 136), rgb(172, 53, 34) 69.792%), rgb(255, 255, 255);
+  }
+
+  .background-page__start-next.taste-sixth-bg {
+    background: -o-radial-gradient(50% 50%, 42% 86%, rgb(255, 253, 240), rgb(255, 189, 20) 69.792%), rgb(255, 255, 255);
+    background: radial-gradient(42% 86% at 50% 50%, rgb(255, 253, 240), rgb(255, 189, 20) 69.792%), rgb(255, 255, 255);
+  }
+
   .background-page__second {
     background: -o-radial-gradient(50% 50%, 42.47% 85.84%, #FFF3EA 0%, #F7E0CF 100%), -o-radial-gradient(50% 50%, 42.47% 85.84%, #00D0DE 0%, #008891 69.79%), -o-radial-gradient(50% 50%, 42.47% 85.84%, #00EFE1 0%, #008891 100%), -o-radial-gradient(50% 50%, 42.47% 85.84%, #944E1B 0%, #552503 100%);
     background: radial-gradient(42.47% 85.84% at 50% 50%, #FFF3EA 0%, #F7E0CF 100%), radial-gradient(42.47% 85.84% at 50% 50%, #00D0DE 0%, #008891 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #00EFE1 0%, #008891 100%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
@@ -2466,6 +2452,16 @@ body::after {
   .background-page__last.taste-fourth-bg {
     background: -o-radial-gradient(50% 50%, 42.47% 85.84%, #FFD1BE 0%, #FF4F18 69.79%), -o-radial-gradient(50% 50%, 42.47% 85.84%, #944E1B 0%, #552503 100%);
     background: radial-gradient(42.47% 85.84% at 50% 50%, #FFD1BE 0%, #FF4F18 69.79%), radial-gradient(42.47% 85.84% at 50% 50%, #944E1B 0%, #552503 100%);
+  }
+
+  .background-page__last.taste-fifth-bg {
+    background: -o-radial-gradient(50% 50%, 42% 86%, rgb(239, 149, 136), rgb(172, 53, 34) 69.792%), rgb(255, 255, 255);
+    background: radial-gradient(42% 86% at 50% 50%, rgb(239, 149, 136), rgb(172, 53, 34) 69.792%), rgb(255, 255, 255);
+  }
+
+  .background-page__last.taste-sixth-bg {
+    background: -o-radial-gradient(50% 50%, 42% 86%, rgb(255, 253, 240), rgb(255, 189, 20) 69.792%), rgb(255, 255, 255);
+    background: radial-gradient(42% 86% at 50% 50%, rgb(255, 253, 240), rgb(255, 189, 20) 69.792%), rgb(255, 255, 255);
   }
 }
 
@@ -2733,8 +2729,6 @@ body::after {
   .fourth .cards-fourth {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto auto;
-    grid-template-columns: auto auto;
     width: 100%;
     gap: 1.25rem;
     padding: 2.5rem 0 3.125rem;
@@ -2814,6 +2808,7 @@ body::after {
 
   .first__refresh {
     font-size: 1.375rem;
+    top: 3.125rem;
   }
 
   .grenka__paper {
@@ -2853,6 +2848,16 @@ body::after {
   }
 }
 
+@media (max-width: 376.98px) {
+  .fourth .cards-fourth {
+    padding: 1.25rem 0 1.5625rem;
+  }
+
+  .fourth .cards-fourth__item-ibg {
+    padding-bottom: 40%;
+  }
+}
+
 @media (max-width: 375px) {
   .popup {
     padding: 1.25rem;
@@ -2875,6 +2880,12 @@ body::after {
 
   [class*=__container] {
     padding-right: 0.9375rem;
+  }
+}
+
+@media (max-width: 100.06125em) {
+  .first__images {
+    max-width: 28.125rem;
   }
 }
 
@@ -2918,6 +2929,13 @@ body::after {
       padding-right: calc(0.9375rem + 0.3125 * (100vw - 20rem) / 100);
     }
 }
+}
+
+@media (max-width: 100.06125em) and (min-width: 61.99875em) {
+  .second .second-slide__title {
+    margin-bottom: 11.25rem;
+    margin-top: 3.75rem;
+  }
 }
 
 @media (max-width: 61.99875em) and (min-width: 30em) {

@@ -7532,7 +7532,7 @@
                     tlPackages.to(".second-slide__title", {
                         keyframes: [ {
                             y: "100vh",
-                            fontSize: 100
+                            fontSize: 90
                         }, {
                             y: "57vh",
                             fontSize: 70
@@ -7542,7 +7542,7 @@
                             delay: .2
                         }, {
                             y: "1vh",
-                            fontSize: 100
+                            fontSize: 90
                         } ]
                     }, "<");
                 }));
@@ -7559,7 +7559,7 @@
                             fontSize: 60,
                             delay: .2
                         }, {
-                            y: "1vh",
+                            y: "-1vh",
                             fontSize: 70
                         } ]
                     }, "<");
@@ -7577,7 +7577,7 @@
                             fontSize: 60,
                             delay: .2
                         }, {
-                            y: "4vh",
+                            y: "1vh",
                             fontSize: 70
                         } ]
                     }, "<");
@@ -7608,7 +7608,7 @@
                             y: "23vh",
                             delay: .2
                         }, {
-                            y: "-8vh"
+                            y: "-10vh"
                         } ]
                     }, "<");
                 }));
@@ -7676,7 +7676,7 @@
                     tlOpen.to(".second-slide__title", {
                         keyframes: [ {
                             y: "-50vh",
-                            fontSize: 110
+                            fontSize: 100
                         } ]
                     });
                 }));
@@ -7928,7 +7928,7 @@
                     tlPackages.to(".second-slide__title", {
                         keyframes: [ {
                             y: "100vh",
-                            fontSize: 100
+                            fontSize: 90
                         }, {
                             y: "57vh",
                             fontSize: 70
@@ -7938,7 +7938,7 @@
                             delay: .2
                         }, {
                             y: "-5vh",
-                            fontSize: 100
+                            fontSize: 90
                         } ]
                     }, "<");
                     tlPackages.to(".second-slide__packages", {

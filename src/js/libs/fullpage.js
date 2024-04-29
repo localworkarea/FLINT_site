@@ -675,10 +675,10 @@ export class FullPage {
 			mm.add('(min-width: 1201px)', () => {
 				tlPackages.to('.second-slide__title', {
 					keyframes: [
-						{y: "100vh", fontSize: 100,},
+						{y: "100vh", fontSize: 90,},
 						{y: "57vh", fontSize: 70,},
 						{y: "23vh", fontSize: 80, delay: 0.2,},
-						{y: "1vh", fontSize: 100,},
+						{y: "1vh", fontSize: 90,},
 					],
 				}, "<");
 			});
@@ -688,7 +688,7 @@ export class FullPage {
 						{y: "100vh", fontSize: 70,},
 						{y: "57vh", fontSize: 50,},
 						{y: "23vh", fontSize: 60, delay: 0.2,},
-						{y: "1vh", fontSize: 70,},
+						{y: "-1vh", fontSize: 70,},
 					],
 				}, "<");
 			});
@@ -698,7 +698,7 @@ export class FullPage {
 						{y: "100vh", fontSize: 70,},
 						{y: "57vh", fontSize: 50,},
 						{y: "23vh", fontSize: 60, delay: 0.2,},
-						{y: "4vh", fontSize: 70,},
+						{y: "1vh", fontSize: 70,},
 					],
 				}, "<");
 			});
@@ -718,7 +718,7 @@ export class FullPage {
 						{y: "100vh", fontSize: 32,},
 						{y: "57vh", },
 						{y: "23vh",  delay: 0.2,},
-						{y: "-8vh", },
+						{y: "-10vh", },
 					],
 				}, "<");
 			});
@@ -772,7 +772,7 @@ export class FullPage {
 			mm.add('(min-width: 1201px)', () => {
 				tlOpen.to('.second-slide__title', {
 					keyframes: [
-						{y: "-50vh",fontSize: 110,},
+						{y: "-50vh",fontSize: 100,},
 					]
 				});
 			});
@@ -963,10 +963,10 @@ export class FullPage {
 			mm.add('(min-width:1024px) and (max-height:899px)', () => {
 				tlPackages.to('.second-slide__title', {
 					keyframes: [
-						{y: "100vh", fontSize: 100,},
+						{y: "100vh", fontSize: 90,},
 						{y: "57vh", fontSize: 70,},
 						{y: "23vh", fontSize: 80, delay: 0.2,},
-						{y: "-5vh", fontSize: 100,},
+						{y: "-5vh", fontSize: 90,},
 					],
 				}, "<");
 				tlPackages.to('.second-slide__packages', {
