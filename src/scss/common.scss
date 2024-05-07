@@ -371,10 +371,10 @@
     100% {bottom: 17%;}
   }
   @keyframes  mouse-move-sm-2 {
-    0% {bottom: 17%;}
+    0% {bottom: 12%;}
     // 30% {bottom: -100%}
     50% {bottom: -100%;}
-    100% {bottom: 17%;}
+    100% {bottom: 12%;}
   }
   @keyframes mouse-move-2 {
     0% {bottom: 15%;}
@@ -549,7 +549,7 @@
     @keyframes mouse-text-opacity-sm-1 {
       0%{opacity: 0; }
       90%{opacity: 0;}
-      100%{opacity: 1; bottom: 18%;}
+      100%{opacity: 1; bottom: 13%;}
     }
   }
   // .mouse__text-mouse

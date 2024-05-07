@@ -749,7 +749,7 @@ export class FullPage {
 						{y: "100vh"},
 						{y: "50vh",},
 						{y: "22vh", delay: 0.2},
-						{y: "-38vh",},
+						{y: "-33vh",},
 					]
 				}, "<");
 			});

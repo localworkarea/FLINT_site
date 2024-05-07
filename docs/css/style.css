@@ -912,7 +912,7 @@ body::after {
 
 @-webkit-keyframes mouse-move-sm-2 {
   0% {
-    bottom: 17%;
+    bottom: 12%;
   }
 
   50% {
@@ -920,13 +920,13 @@ body::after {
   }
 
   100% {
-    bottom: 17%;
+    bottom: 12%;
   }
 }
 
 @keyframes mouse-move-sm-2 {
   0% {
-    bottom: 17%;
+    bottom: 12%;
   }
 
   50% {
@@ -934,7 +934,7 @@ body::after {
   }
 
   100% {
-    bottom: 17%;
+    bottom: 12%;
   }
 }
 
@@ -1622,7 +1622,7 @@ body::after {
 
   100% {
     opacity: 1;
-    bottom: 18%;
+    bottom: 13%;
   }
 }
 
@@ -1637,7 +1637,7 @@ body::after {
 
   100% {
     opacity: 1;
-    bottom: 18%;
+    bottom: 13%;
   }
 }
 
